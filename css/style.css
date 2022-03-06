@@ -74,6 +74,13 @@ body {
   margin: 0px;
 }
 
+img {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+}
+
 svg {
   padding: 0;
   margin: 0;
@@ -99,6 +106,7 @@ svg {
 
 .container.head {
   display: flex;
+  position: relative;
   align-items: center;
 }
 
@@ -111,6 +119,26 @@ svg {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.link.nav.current::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
+
+  background: #2196f3;
+  border-radius: 2px;
+}
+.link.nav.current.portfolio::before {
+  content: '';
+  position: absolute;
+
+  width: 78px;
+  height: 4px;
+
+  background: #2196f3;
+  border-radius: 2px;
 }
 .link-head-contact {
   align-items: center;
@@ -137,7 +165,7 @@ svg {
   display: flex;
   align-items: center;
 }
-nav > .logo {
+.logo {
   margin-right: 93px;
 }
 .logo {
@@ -375,6 +403,26 @@ nav > .logo {
 .specialization-item:not(:last-child) {
   margin-right: 30px;
 }
+.spec-thumb {
+  position: relative;
+}
+.spec-thumb-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 /* Section worker */
 
 .worker-section {
@@ -509,6 +557,8 @@ nav > .logo {
 }
 .portfolio-link {
   display: block;
+
+  text-decoration: none;
   margin: 0;
   padding: 0;
 }
@@ -516,6 +566,39 @@ nav > .logo {
 .portfolio-link:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.product-thumb {
+  position: relative;
+}
+.product-thumb-paragraph {
+  position: absolute;
+  width: 322px;
+  height: 168px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--white-color);
+  opacity: 0;
+}
+.product-thumb::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+.portfolio-link:hover .product-thumb::before {
+  opacity: 1;
+}
+.portfolio-link:hover .product-thumb-paragraph {
+  opacity: 1;
 }
 .portfolio-list:nth-child(3n) {
   margin-right: 0px;
