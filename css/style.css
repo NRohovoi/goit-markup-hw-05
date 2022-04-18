@@ -117,8 +117,8 @@ svg {
   align-items: center;
 }
 
-.link.nav,
-.link.link-head-contact {
+.nav,
+.link-head-contact {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -148,23 +148,37 @@ svg {
   border-radius: 2px;
 }
 .link-head-contact {
+  display: flex;
   align-items: center;
   justify-content: center;
-}
-.list.contact {
-  margin-left: auto;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
 }
 .contact-icon {
   margin-right: 10px;
   width: 16px;
   height: 12px;
-  /* position: relative; */
-  top: 0.15em;
+fill: inherit;
 }
+
 .contact-icon.tel {
   width: 10px;
   height: 16px;
 }
+.link-head-contact:hover,
+.link-head-contact:focus {
+  color: var(--accent-colot);
+}
+.list.contact {
+  margin-left: auto;
+}
+
 
 /* Logo */
 
@@ -213,11 +227,7 @@ svg {
 .contact-list:not(:last-child) {
   margin-right: 50px;
 }
-.link-head-contact:hover,
-.link-head-contact:focus {
-  color: var(--accent-colot);
-  fill: var(--accent-colot);
-}
+
 .head-contact,
 .nav-link {
   letter-spacing: 0.02em;
