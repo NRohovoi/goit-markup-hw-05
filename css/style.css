@@ -100,7 +100,7 @@ svg {
 a,
 button,
 svg {
-  transition-property: backgraund-color, backgraund, color, box-shadow, fill;
+  transition-property: color, box-shadow, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
